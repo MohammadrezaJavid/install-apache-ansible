@@ -1,44 +1,82 @@
 ---
 
-- hosts: all
+- hosts: allhost
   become: true
   tasks:
 
-  - name: update repository index
-    apt:
-      update_cache: yes
-    when: ansible_distribution in ["Ubuntu", "Debian"]
-
-  - name: install apache2 package
-    apt:
-      name: apache2
-      state: latest
-    when: ansible_distribution in ["Ubuntu", "Debian"]
-
-  - name: add php support for apache
-    apt:
-      name: libapache2-mod-php
-      state: latest
-    when: ansible_distribution in ["Ubuntu", "Debian"]
+    - name: install webservice
+      ansible.builtin.package:
+        name: "{{ webservice }}"
+        state: latest
 
 
-- hosts: all
-  become: true
-  tasks:
+# - hosts: all
+#   become: true
+#   tasks:
 
-  - name: update repository index
-    dnf:
-      update_cache: yes
-    when: ansible_distribution in ["Centos", "Rocky", "Fedora", "rhel"]
+#   - name: update repository index
+#     apt:
+#       update_cache: yes
+#     when: ansible_distribution in ["Ubuntu", "Debian"]
 
-  - name: install httpd package
-    dnf:
-      name: httpd
-      state: latest
-    when: ansible_distribution in ["Centos", "Rocky", "Fedora", "rhel"]
+#   - name: install apache2 package
+#     apt:
+#       name: apache2
+#       state: latest
+#     when: ansible_distribution in ["Ubuntu", "Debian"]
 
-  - name: add php support for apache
-    apt:
-      name: php
-      state: latest
-    when: ansible_distribution in ["Centos", "Rocky", "Fedora", "rhel"]
+#   - name: add php support for apache
+#     apt:
+#       name: libapache2-mod-php
+#       state: latest
+#     when: ansible_distribution in ["Ubuntu", "Debian"]
+
+
+# - hosts: all
+#   become: true
+#   tasks:
+
+#   - name: update repository index
+#     dnf:
+#       update_cache: yes
+#     when: ansible_distribution in ["Centos", "Rocky", "Fedora", "rhel"]
+
+#   - name: install httpd package
+#     dnf:
+#       name: httpd
+#       state: latest
+#     when: ansible_distribution in ["Centos", "Rocky", "Fedora", "rhel"]
+
+#   - name: add php support for apache
+#     dnf:
+#       name: php
+#       state: latest
+#     when: ansible_distribution in ["Centos", "Rocky", "Fedora", "rhel"]
+
+# --------------------------------------------------------------
+# - hosts: all
+#   become: true
+#   tasks:
+
+#   - name: install httpd
+#     ansible.builtin.package:
+#       name: "{{ webservice_httpd }}"
+#       state: latest
+
+#   - name: install apache2
+#     ansible.builtin.package:
+#       name: "{{ webservice_apache2 }}"
+#       state: latest
+
+# - hosts: all
+#   become: true
+#   tasks:
+
+#   - name: install httpd
+#     ansible.builtin.package:
+#       name: "{{ item }}" 
+#       state: latest
+#     loop:
+#       - vim
+#       - curl
+#       - bash-completion
