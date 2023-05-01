@@ -1,6 +1,7 @@
 [allhost]
-192.168.102.2 webservice=apache2
-192.168.100.139 webservice=httpd
+#192.168.102.2 webservice=apache2 # vm2
+192.168.103.2 webservice=apache2 # vm3
+192.168.100.139 webservice=httpd # vm4
 
 [all:vars]
 ansible_ssh_user=javid
