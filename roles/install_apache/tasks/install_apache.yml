@@ -1,6 +1,7 @@
 - name: install apache and php
   ansible.builtin.package:
     name: 
-      - "{{ webservice }}"
-      - "{{ php }}"
+      - "{{ item.service }}"
+      - "{{ item.php }}"
     state: latest
+  with_items: '{{ webservers }}'

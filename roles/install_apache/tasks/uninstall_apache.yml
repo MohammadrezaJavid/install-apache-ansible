@@ -1,6 +1,7 @@
 - name: remove apache and php
   ansible.builtin.package:
     name: 
-      - "{{ webservice }}" 
-      - "{{ php }}"
-  state: absent
+      - "{{ item.service }}" 
+      - "{{ item.php }}"
+    state: absent
+  with_items: '{{ webservers }}'
