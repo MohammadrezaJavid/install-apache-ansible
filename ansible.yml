@@ -1,0 +1,8 @@
+---
+
+- hosts: allhost
+  become: true
+
+  roles:
+    #- update
+    - install_apache

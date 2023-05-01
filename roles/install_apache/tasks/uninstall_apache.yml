@@ -1,13 +1,9 @@
----
-
-- hosts: all
-  become: true
-  tasks:
-
-  - name: remove httpd
-    ansible.builtin.package:
-      name: "{{ webservice }}"
-      state: absent
+- name: remove apache and php
+  ansible.builtin.package:
+    name: 
+      - "{{ webservice }}" 
+      - "{{ php }}"
+  state: absent
 
 # - hosts: all
 #   become: true

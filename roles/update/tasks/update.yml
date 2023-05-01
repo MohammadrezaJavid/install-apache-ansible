@@ -1,0 +1,7 @@
+- name: install updates (dnf)
+  ansible.builtin.dnf:
+    update_cache: true
+    update_only: true
+        
+      
+  
