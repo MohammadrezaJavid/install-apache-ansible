@@ -2,3 +2,10 @@
   ansible.builtin.dnf:
     update_cache: true
     update_only: true
+  when: ansible_distribution in ["Centos", "Rocky"]
+
+- name: install updates (apt)
+  ansible.builtin.apt:
+    update_cache: true
+    only_upgrade: true
+  when: ansible_distribution in ["Debian", "Ubuntu"]
