@@ -5,18 +5,39 @@
   tasks:
 
   - name: update repository index
-    apt:
+    ansible.builtin.apt:
       update_cache: yes
     when: ansible_distribution in ["Ubuntu", "Debian"]
 
   - name: uninstall apache2 package
-    apt:
+    ansible.builtin.apt:
       name: apache2
       state: absent
     when: ansible_distribution in ["Ubuntu", "Debian"]
 
   - name: remove php support for apache
-    apt:
+    ansible.builtin.apt:
       name: libapache2-mod-php
       state: absent
     when: ansible_distribution in ["Ubuntu", "Debian"]
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repository index
+    dnf:
+      update_cache: yes
+    when: ansible_distribution in ["Centos", "Rocky", "Fedora", "rhel"]
+
+  - name: install httpd package
+    dnf:
+      name: httpd
+      state: absent
+    when: ansible_distribution in ["Centos", "Rocky", "Fedora", "rhel"]
+
+  - name: add php support for apache
+    apt:
+      name: php
+      state: absent
+    when: ansible_distribution in ["Centos", "Rocky", "Fedora", "rhel"]
