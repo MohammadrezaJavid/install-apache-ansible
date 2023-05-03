@@ -1,0 +1,20 @@
+---
+
+# - name: enable and start apache (debian based distro)
+#   ansible.builtin.shell: |
+#     "systemctl {{ item }}"
+#   with_items:
+#     #- unmask apache2
+#     - enable apache2
+#     - reload-or-restart apache2
+#   when: ansible_distribution in ["Debian", "Ubuntu"]
+
+
+- name: enable and start apache (rhel based distro)
+  ansible.builtin.command:
+    "systemctl {{ item }}"
+  with_items:
+    - unmask httpd
+    - enable httpd
+    - reload-or-restart httpd
+  when: ansible_distribution in ["Centos", "Rocky"]
