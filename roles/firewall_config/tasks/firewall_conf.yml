@@ -1,3 +1,4 @@
+---
 
 - name: disable and mask firewalld
   ansible.builtin.command:
@@ -16,7 +17,6 @@
     - disable ufw
     - mask ufw
   when: ansible_distribution in ["Debian", "Ubuntu"]
- 
 
 - name: install iptables (debian based distro)
   ansible.builtin.apt:
