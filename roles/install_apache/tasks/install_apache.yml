@@ -1,7 +1,25 @@
-- name: install apache and php
-  ansible.builtin.package:
-    name: 
-      - "{{ item.service }}"
-      - "{{ item.php }}"
+---
+
+# - name: install apache and php
+#   ansible.builtin.package:
+#     name: 
+#       - "{{ item.service }}"
+#       - "{{ item.php }}"
+#     state: latest
+#   with_items: '{{ webservers }}'
+
+- name: install apache and php (rhel based distro)
+  ansible.builtin.dnf:
+    name:
+      - httpd
+      - php
     state: latest
-  with_items: '{{ webservers }}'
+  when: ansible_distribution in ["Centos", "Rocky"]
+
+- name: install apache and php (debian based distro)
+  ansible.builtin.apt:
+    name:
+      - apache2
+      - libapache2-mod-php
+    state: latest
+  when: ansible_distribution in ["Debian", "Ubuntu"]
