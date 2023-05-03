@@ -1,1 +1,4 @@
-- include: update.yml
+---
+
+- ansible.builtin.include_tasks:
+    update.yml

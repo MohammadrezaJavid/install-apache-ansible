@@ -1,11 +1,13 @@
-- name: install updates (dnf)
+---
+
+- name: updates (dnf)
   ansible.builtin.dnf:
     update_cache: true
     #update_only: true
     autoremove: true
   when: ansible_distribution in ["Centos", "Rocky"]
 
-- name: install updates (apt)
+- name: updates and upgrade (apt)
   ansible.builtin.apt:
     cache_valid_time: 3600
     update_cache: true
