@@ -1,0 +1,59 @@
+
+- name: disable and mask firewalld
+  ansible.builtin.command:
+    "systemctl {{ item }}"
+  with_items:
+    - stop firewalld.service
+    - disable firewalld.service
+    - mask firewalld.service
+  when: ansible_distribution in ["Centos", "Rocky"]
+
+- name: disable and mask ufw
+  ansible.builtin.command:
+    "systemctl {{ item }}"
+  with_items:
+    - stop ufw
+    - disable ufw
+    - mask ufw
+  when: ansible_distribution in ["Debian", "Ubuntu"]
+ 
+
+- name: install iptables (debian based distro)
+  ansible.builtin.apt:
+    update_cache: true
+    name:
+      - iptables
+      - iptables-persistent
+    state: latest
+  when: ansible_distribution in ["Debian", "Ubuntu"]
+
+- name: install iptables (redhat based distros)
+  ansible.builtin.dnf:
+    name:
+      - iptables-services
+    state: latest
+  when: ansible_distribution in ["Centos", "Rocky"]
+
+- name: enable and start iptables
+  ansible.builtin.command:
+    "systemctl {{ item }}"
+  with_items:
+    - unmask iptables.service
+    - enable iptables.service
+    - start iptables.service
+
+- name: open 80 and 443 port (redhat based distros)
+  ansible.builtin.shell: |
+    /sbin/iptables -t filter -I INPUT -p tcp --dport 443 -j ACCEPT
+    /sbin/iptables -t filter -I INPUT -p tcp --dport 80 -j ACCEPT
+    /sbin/iptables-save > /etc/sysconfig/iptables
+    systemctl restart iptables.service
+  when: ansible_distribution in ["Centos", "Rocky"]
+  
+- name: open 80 and 443 port (debian based distro)
+  ansible.builtin.shell: |
+    /sbin/iptables -t filter -I INPUT -p tcp --dport 443 -j ACCEPT
+    /sbin/iptables -t filter -I INPUT -p tcp --dport 80 -j ACCEPT
+    /sbin/iptables-save > /etc/iptables/rules.v4
+    systemctl restart iptables.service
+  when: ansible_distribution in ["Debian", "Ubuntu"]
