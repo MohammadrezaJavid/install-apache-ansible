@@ -1,4 +1,4 @@
 ---
 
-- ansible.builtin.include_tasks:
+- ansible.builtin.import_playbook:
     update.yml

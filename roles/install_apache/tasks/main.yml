@@ -1,8 +1,8 @@
 ---
 
-- ansible.builtin.include_tasks: 
+- ansible.builtin.import_playbook:
     uninstall_apache.yml
-- ansible.builtin.include_tasks: 
+- ansible.builtin.import_playbook:
     install_apache.yml
-- ansible.builtin.include_tasks: 
+- ansible.builtin.import_playbook:
     apache_conf.yml
