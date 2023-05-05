@@ -4,6 +4,6 @@
   become: yes
 
   roles:
-    - update
+    # - update
     - install_apache
-    - firewall_config
+    # - firewall_config
