@@ -1,0 +1,131 @@
+2023-05-05 16:11:46,755 p=21832 u=mohammadreza n=ansible | [WARNING]: Unable to parse /home/mohammadreza/ansible/ansible/ansible/.inventory/hosts.ini
+as an inventory source
+
+2023-05-05 16:11:46,755 p=21832 u=mohammadreza n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-05-05 16:11:46,769 p=21832 u=mohammadreza n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the
+implicit localhost does not match 'all'
+
+2023-05-05 16:11:46,870 p=21832 u=mohammadreza n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: webservers
+
+2023-05-05 16:11:46,871 p=21832 u=mohammadreza n=ansible | PLAY [webservers] **************************************************************************
+2023-05-05 16:11:46,871 p=21832 u=mohammadreza n=ansible | skipping: no hosts matched
+2023-05-05 16:11:46,871 p=21832 u=mohammadreza n=ansible | PLAY RECAP *********************************************************************************
+2023-05-05 16:12:15,626 p=21886 u=mohammadreza n=ansible | [WARNING]: Unable to parse /home/mohammadreza/ansible/ansible/ansible/.inventory/hosts.yml as an inventory source
+
+2023-05-05 16:12:15,627 p=21886 u=mohammadreza n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-05-05 16:12:15,632 p=21886 u=mohammadreza n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-05-05 16:12:15,693 p=21886 u=mohammadreza n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: webservers
+
+2023-05-05 16:12:15,694 p=21886 u=mohammadreza n=ansible | PLAY [webservers] ************************************************************************************************************
+2023-05-05 16:12:15,694 p=21886 u=mohammadreza n=ansible | skipping: no hosts matched
+2023-05-05 16:12:15,694 p=21886 u=mohammadreza n=ansible | PLAY RECAP *******************************************************************************************************************
+2023-05-05 16:13:45,440 p=22109 u=mohammadreza n=ansible | [WARNING]:  * Failed to parse /home/mohammadreza/ansible/ansible/ansible/inventory/hosts.yml with auto plugin: We were unable
+to read either as JSON nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)
+Syntax Error while loading YAML.   could not find expected ':'  The error appears to be in
+'/home/mohammadreza/ansible/ansible/ansible/inventory/hosts.yml': line 8, column 19, but may be elsewhere in the file
+depending on the exact syntax problem.  The offending line appears to be:      vm2       ansible_host: 192.168.103.2
+^ here
+
+2023-05-05 16:13:45,441 p=22109 u=mohammadreza n=ansible | [WARNING]:  * Failed to parse /home/mohammadreza/ansible/ansible/ansible/inventory/hosts.yml with yaml plugin: We were unable
+to read either as JSON nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)
+Syntax Error while loading YAML.   could not find expected ':'  The error appears to be in
+'/home/mohammadreza/ansible/ansible/ansible/inventory/hosts.yml': line 8, column 19, but may be elsewhere in the file
+depending on the exact syntax problem.  The offending line appears to be:      vm2       ansible_host: 192.168.103.2
+^ here
+
+2023-05-05 16:13:45,441 p=22109 u=mohammadreza n=ansible | [WARNING]:  * Failed to parse /home/mohammadreza/ansible/ansible/ansible/inventory/hosts.yml with ini plugin: Invalid host
+pattern '---' supplied, '---' is normally a sign this is a YAML file.
+
+2023-05-05 16:13:45,441 p=22109 u=mohammadreza n=ansible | [WARNING]: Unable to parse /home/mohammadreza/ansible/ansible/ansible/inventory/hosts.yml as an inventory source
+
+2023-05-05 16:13:45,442 p=22109 u=mohammadreza n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-05-05 16:13:45,445 p=22109 u=mohammadreza n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-05-05 16:14:46,321 p=22222 u=mohammadreza n=ansible | [WARNING]: Unable to parse /home/mohammadreza/ansible/ansible/ansible/inventory/hosts.yml as an inventory source
+
+2023-05-05 16:14:46,321 p=22222 u=mohammadreza n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-05-05 16:14:46,325 p=22222 u=mohammadreza n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-05-05 16:15:07,741 p=22242 u=mohammadreza n=ansible | [WARNING]:  * Failed to parse /home/mohammadreza/ansible/ansible/ansible/inventory/main.yml with auto plugin: We were unable
+to read either as JSON nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)
+Syntax Error while loading YAML.   could not find expected ':'  The error appears to be in
+'/home/mohammadreza/ansible/ansible/ansible/inventory/main.yml': line 8, column 19, but may be elsewhere in the file
+depending on the exact syntax problem.  The offending line appears to be:      vm2       ansible_host: 192.168.103.2
+^ here
+
+2023-05-05 16:15:07,742 p=22242 u=mohammadreza n=ansible | [WARNING]:  * Failed to parse /home/mohammadreza/ansible/ansible/ansible/inventory/main.yml with yaml plugin: We were unable
+to read either as JSON nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)
+Syntax Error while loading YAML.   could not find expected ':'  The error appears to be in
+'/home/mohammadreza/ansible/ansible/ansible/inventory/main.yml': line 8, column 19, but may be elsewhere in the file
+depending on the exact syntax problem.  The offending line appears to be:      vm2       ansible_host: 192.168.103.2
+^ here
+
+2023-05-05 16:15:07,742 p=22242 u=mohammadreza n=ansible | [WARNING]:  * Failed to parse /home/mohammadreza/ansible/ansible/ansible/inventory/main.yml with ini plugin: Invalid host
+pattern '---' supplied, '---' is normally a sign this is a YAML file.
+
+2023-05-05 16:15:07,742 p=22242 u=mohammadreza n=ansible | [WARNING]: Unable to parse /home/mohammadreza/ansible/ansible/ansible/inventory/main.yml as an inventory source
+
+2023-05-05 16:15:07,743 p=22242 u=mohammadreza n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-05-05 16:15:07,746 p=22242 u=mohammadreza n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-05-05 16:16:48,922 p=22394 u=mohammadreza n=ansible | vm3 | FAILED | rc=-1 >>
+Missing sudo password
+
+2023-05-05 16:16:50,227 p=22394 u=mohammadreza n=ansible |  [ERROR]: User interrupted execution
+
+2023-05-05 16:17:00,674 p=22455 u=mohammadreza n=ansible | vm3 | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2023-05-05 16:17:00,954 p=22455 u=mohammadreza n=ansible | vm2 | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2023-05-05 16:17:00,954 p=22455 u=mohammadreza n=ansible | vm1 | FAILED | rc=-1 >>
+Incorrect sudo password
+
+2023-05-05 16:17:06,421 p=22496 u=mohammadreza n=ansible | vm2 | CHANGED | rc=0 >>
+NAME="Ubuntu"
+
+2023-05-05 16:17:06,458 p=22496 u=mohammadreza n=ansible | vm1 | CHANGED | rc=0 >>
+NAME="Ubuntu"
+
+2023-05-05 16:17:06,783 p=22496 u=mohammadreza n=ansible | vm3 | CHANGED | rc=0 >>
+NAME="Rocky Linux"
+
+2023-05-05 16:18:19,923 p=22729 u=mohammadreza n=ansible | [WARNING]: Unable to parse /home/mohammadreza/ansible/ansible/ansible/.inventory/hosts.yml as an inventory source
+
+2023-05-05 16:18:19,923 p=22729 u=mohammadreza n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-05-05 16:18:19,928 p=22729 u=mohammadreza n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-05-05 16:18:19,992 p=22729 u=mohammadreza n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: webservers
+
+2023-05-05 16:18:19,992 p=22729 u=mohammadreza n=ansible | PLAY [webservers] ************************************************************************************************************
+2023-05-05 16:18:19,993 p=22729 u=mohammadreza n=ansible | skipping: no hosts matched
+2023-05-05 16:18:19,993 p=22729 u=mohammadreza n=ansible | PLAY RECAP *******************************************************************************************************************
+2023-05-05 16:19:10,745 p=22802 u=mohammadreza n=ansible | PLAY [webservers] ************************************************************************************************************
+2023-05-05 16:19:10,785 p=22802 u=mohammadreza n=ansible | TASK [Gathering Facts] *******************************************************************************************************
+2023-05-05 16:19:13,991 p=22802 u=mohammadreza n=ansible | ok: [vm1]
+2023-05-05 16:19:14,165 p=22802 u=mohammadreza n=ansible | ok: [vm3]
+2023-05-05 16:19:14,176 p=22802 u=mohammadreza n=ansible | ok: [vm2]
+2023-05-05 16:19:14,199 p=22802 u=mohammadreza n=ansible | TASK [install_apache : ansible.builtin.include_tasks] ************************************************************************
+2023-05-05 16:19:14,271 p=22802 u=mohammadreza n=ansible | included: /home/mohammadreza/ansible/ansible/ansible/roles/install_apache/tasks/uninstall_apache.yml for vm1, vm2, vm3
+2023-05-05 16:19:14,283 p=22802 u=mohammadreza n=ansible | TASK [install_apache : remove apache and php] ********************************************************************************
+2023-05-05 16:19:45,719 p=22802 u=mohammadreza n=ansible | changed: [vm2] => (item={'name': 'vm1', 'ip': '192.168.102.2', 'service': 'apache2', 'php': 'libapache2-mod-php'})
+2023-05-05 16:19:46,523 p=22802 u=mohammadreza n=ansible | ok: [vm2] => (item={'name': 'vm2', 'ip': '192.168.103.2', 'service': 'apache2', 'php': 'libapache2-mod-php'})
+2023-05-05 16:19:47,255 p=22802 u=mohammadreza n=ansible | changed: [vm1] => (item={'name': 'vm1', 'ip': '192.168.102.2', 'service': 'apache2', 'php': 'libapache2-mod-php'})
+2023-05-05 16:19:47,356 p=22802 u=mohammadreza n=ansible | ok: [vm2] => (item={'name': 'vm3', 'ip': '192.168.100.139', 'service': 'httpd', 'php': 'php'})
+2023-05-05 16:19:48,021 p=22802 u=mohammadreza n=ansible | ok: [vm1] => (item={'name': 'vm2', 'ip': '192.168.103.2', 'service': 'apache2', 'php': 'libapache2-mod-php'})
+2023-05-05 16:19:48,752 p=22802 u=mohammadreza n=ansible | ok: [vm1] => (item={'name': 'vm3', 'ip': '192.168.100.139', 'service': 'httpd', 'php': 'php'})
+2023-05-05 16:21:49,448 p=22802 u=mohammadreza n=ansible | ok: [vm3] => (item={'name': 'vm1', 'ip': '192.168.102.2', 'service': 'apache2', 'php': 'libapache2-mod-php'})
+2023-05-05 16:21:50,467 p=22802 u=mohammadreza n=ansible | ok: [vm3] => (item={'name': 'vm2', 'ip': '192.168.103.2', 'service': 'apache2', 'php': 'libapache2-mod-php'})
+2023-05-05 16:21:54,055 p=22802 u=mohammadreza n=ansible | changed: [vm3] => (item={'name': 'vm3', 'ip': '192.168.100.139', 'service': 'httpd', 'php': 'php'})
+2023-05-05 16:21:54,106 p=22802 u=mohammadreza n=ansible | PLAY RECAP *******************************************************************************************************************
+2023-05-05 16:21:54,106 p=22802 u=mohammadreza n=ansible | vm1                        : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-05 16:21:54,106 p=22802 u=mohammadreza n=ansible | vm2                        : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-05 16:21:54,106 p=22802 u=mohammadreza n=ansible | vm3                        : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
