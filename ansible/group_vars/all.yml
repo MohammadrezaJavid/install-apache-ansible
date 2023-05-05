@@ -1,38 +1,17 @@
 ---
 
-allhost:
-  - name: vm1
-    ip: 192.168.101.2
-    service: apache2
-    php: libapache2-mod-php
-
-  - name: vm2
-    ip: 192.168.102.2
-    service: apache2
-    php: libapache2-mod-php
-
-  - name: vm3
-    ip: 192.168.103.2
-    service: apache2
-    php: libapache2-mod-php
-
-  - name: vm4
-    ip: 192.168.100.139
-    service: httpd
-    php: php
-
 webservers:
-  - name: vm2
+  - name: vm1
     ip: 192.168.102.2
     service: apache2
     php: libapache2-mod-php
 
-  - name: vm3
+  - name: vm2
     ip: 192.168.103.2
     service: apache2
     php: libapache2-mod-php
 
-  - name: vm4
+  - name: vm3
     ip: 192.168.100.139
     service: httpd
     php: php
