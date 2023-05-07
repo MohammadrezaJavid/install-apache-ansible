@@ -1,2 +1,9 @@
 # ansible-sample
-This repo was created to learn Ansible
+To run this playbook:
+
+```bash
+
+ansible-playbook -i inventory/hosts.ini playbook.yml -K
+
+```
+
