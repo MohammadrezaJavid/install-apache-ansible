@@ -3,7 +3,7 @@ To run this playbook:
 
 ```bash
 
-ansible-playbook -i inventory/hosts.ini playbook.yml -K
+ansible-playbook playbook.yml -K
 
 ```
 
