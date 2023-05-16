@@ -2,7 +2,11 @@
 
 - ansible.builtin.include_tasks:
     uninstall_apache.yml
-# - ansible.builtin.include_tasks:
-#     install_apache.yml
-# - ansible.builtin.include_tasks:
-#     apache_conf.yml
+- ansible.builtin.include_tasks:
+    install_apache.yml
+- ansible.builtin.include_tasks:
+    apache_conf.yml
+- ansible.builtin.include_tasks:
+    upload_files.yml
+
+...

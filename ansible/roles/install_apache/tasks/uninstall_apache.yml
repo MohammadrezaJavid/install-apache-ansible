@@ -7,3 +7,5 @@
       - "{{ item.php }}"
     state: absent
   with_items: '{{ webservers }}'
+
+...

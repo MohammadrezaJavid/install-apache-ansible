@@ -11,15 +11,18 @@
 - name: install apache and php (rhel based distro)
   ansible.builtin.dnf:
     name:
-      - httpd
-      - php
+      - "{{service_rh}}"
+      - "{{php_rh}}"
     state: latest
   when: ansible_distribution in ["Centos", "Rocky"]
 
 - name: install apache and php (debian based distro)
   ansible.builtin.apt:
     name:
-      - apache2
-      - libapache2-mod-php
+      - "{{service_deb}}"
+      - "{{php_deb}}"
     state: latest
   when: ansible_distribution in ["Debian", "Ubuntu"]
+
+
+...
