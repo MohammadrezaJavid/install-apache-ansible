@@ -1,0 +1,7 @@
+---
+service_deb: apache2
+service_rh: httpd
+
+php_deb: libapache2-mod-php
+php_rh: php
+...
